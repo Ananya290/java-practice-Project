@@ -1,0 +1,50 @@
+
+
+1. Selenium IDE : Integrated devlopment environmen
+
+Features:
+==============================
+It supports testing on Chrome and firefox browser
+It is record and playback tool
+It records users actions and you save that as a test
+Play it back as many times as you want
+Simple and easy to work with
+The log section will show test step is success or failure
+At the end in log you will get test executed successfully or it failed
+Suitable for testers who are new automation
+Who donot know how to write code
+
+============================
+
+
+2. Selenium WebDriver
+==================================================
+Selenium Webdriver is the main component of Selenium- where we will do exhaustive automation testing.
+This component has to user interface rather it has selenium libraries which needs to be added in your eclipse
+Usinng webdriver libraries you will selenium scripts
+Every programming lanaguge supported by selenium will have its corresponding selenium webdriver libraries
+
+Selenium webdriver provides interfaces, classes and methods that help us find the element to be tested and automatically perform as action
+ What ever we did in IDE manually, we will do via code in webdriver
+
+Features:
+==================
+> supports testing on all browser
+> Wait times
+> Paramterized testing
+Integrate Webdriver with tools like testNG and cucumber that enhances the fetaures of selenium webdriver
+> Data driven testing
+> pritoritze test cases
+> pre-condition, post condition
+> reports generation
+
+Because of W3C prootocal with Selenium 4:
+
+> tets cases run faster as there is no need to Encode or decode the scripts
+> Testing is more consistent and works better on croass browser
+> browser specific exception --> now we dont get those with selenium 4
+>No need to download drivers in the system --> webDriver Manager -> it will automatically download each driver and works with all browser
+
+
+
+========================================================================================================
