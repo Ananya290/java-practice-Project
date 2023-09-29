@@ -1,0 +1,743 @@
+
+
+
+Pls install Eclipse IDE for Java Developers
+
+Try to open it and try to create a java project in it
+
+Try to create a Java class and run a java program
+
+If it is working. you are ready to go
+=========================================
+
+If the program is not working, then Pls make sure you have Java installed in your laptop
+
+version >=11 
+
+=============================================================================
+
+Manual Testing
+========================
+
+12 am
+
+20 tersters --> 20000 customer forms --> to check if 20000 accounts are created or not
+
+Easy task? -> No
+
+tedious, repetitive
+
+10 hours -> time consuming
+
+skip certain functionalities from testing
+
+Tester assume that feature will work, any may skip scenarios
+
+May ignore certain use cases
+
+human error 
+
+
+
+To overcome these challenges-> Automation tools/Testing
+
+Whenever we have:
+> repetitive tasks, time consuming tasks
+> regression Tests
+> lot of testing for same feature every day
+
+
+Everyday --> 3 PM we get a new Build in the test envrionment-->Regression testing
+Instead of manually doing this regression testing, we can have an automation tool
+to run those simple test cases as soon as the build is deployed in test environment
+
+I have some test cases to be run at 11 PM--> we can use an automation tool and write automation tests--> scehdule them to ru   at 11 pm --> generate the report for you
+
+When you have same test to be run with different test data --> i can use an automation tool --. write automation tests--> send different test data to my automation tests
+
+You want to test performance/load of your application --> use automation tools
+
+When you lot of test cases to be run--> use automationt ool to complete testing
+
+time taken to complete testing is less with automation tool
+
+Automation tool:
+==================
+
+Selenium --> Web application Functional testing tool
+
+Introduced year - 2004 -> JASON Huggins --> selenium1 --> 2008(selenium 2) --> 2016(Selenium 3)--> 2021(selenium 4)
+
+It is an Open source tool and free tool
+
+Selenium is to do functional testing/regression testing of web application
+
+Selenium + Applium --> used for Mobile application testing
+
+Selenium WebDriver is the component used for writing automation scripts
+Its does not have a front -end, so you have to write test scripts
+
+Script : what automation test steps shoudl selenium perform
+
+These scripts can be written in -> JAVA, pyhton, ruby, C#, php
+
+Selenium also has component IDE -> which has a UI
+
+Selenium supports testing on all the browser -> Cross browser testing: Chrome, Edge, ff, safari
+
+It is a stack of tools
+
+1. Selenium IDE : Integrated devlopment environment
+==================================================
+It can downloaded on chrome browser as an extension
+https://www.selenium.dev/selenium-ide/
+
+Features:
+==============================
+It supports testing on Chrome and firefox browser
+It is record and playback tool
+It records users actions and you save that as a test
+Play it back as many times as you want
+Simple and easy to work with
+The log section will show test step is success or failure
+At the end in log you will get test executed successfully or it failed
+Suitable for testers w
+ho are new automation
+Who donot know how to write code
+
+============================
+Disadvantages:
+
+Every time the test case will run with same test data
+passing multiple test data is not possible with IDE
+Everytime any new test case we have to manually record
+We dont have advance features like:
+
+> Wait times
+> Paramterized testing
+> Data driven not allowed
+> No reports are generated
+> no scheduling of scripts 
+> pritoritze test cases
+> pre-condition, post condition
+=================================================
+
+2. Selenium WebDriver
+==================================================
+Selenium Webdriver is the main component of Selenium- where we will do exhaustive automation testing.
+This component has to user interface rather it has selenium libraries which needs to be added in your eclipse
+Usinng webdriver libraries you will selenium scripts
+Every programming lanaguge supported by selenium will have its corresponding selenium webdriver libraries
+
+Selenium webdriver provides interfaces, classes and methods that help us find the element to be tested and automatically perform as action
+ What ever we did in IDE manually, we will do via code in webdriver
+
+Features:
+==================
+> supports testing on all browser
+> Wait times
+> Paramterized testing
+Integrate Webdriver with tools like testNG and cucumber that enhances the fetaures of selenium webdriver
+> Data driven testing
+> pritoritze test cases
+> pre-condition, post condition
+> reports generation
+
+Because of W3C prootocal with Selenium 4:
+
+> tets cases run faster as there is no need to Encode or decode the scripts
+> Testing is more consistent and works better on croass browser
+> browser specific exception --> now we dont get those with selenium 4
+>No need to download drivers in the system --> webDriver Manager -> it will automatically download each driver and works with all browser
+
+
+3. Selenium GRID
+=======================
+
+Grid is that component of selenium which is used only for execution
+
+We dont write sscripts using grid
+
+If you want to execute test cases in distributed environment-> use grid
+
+===========================================
+
+Go to File --> New--> select project --> select maven project
+
+A new maven project template will open
+
+Click on checkbox for - create simple project
+
+Un check default workspace
+
+from the frop down select  toption ending with eclipse workspace
+
+If you dont find it then select it by clicking on Browse button
+
+Click on checkbox og workspace
+
+Press Next button
+
+Enter a unique name for Group ID: selenium-Basics
+
+Artifact ID : selenium-Basics
+
+Always Artifact ID and group id will be same
+
+Click on finish 
+
+
+In the project Explorer, you will see your maven project
+
+Expand the project now
+
+You will see a file called --> pom.xml file
+
+Double click and open the file
+==================================================
+
+On you laptop:
+====================================================
+
+Make sure :
+
+> only 1 JAVA version should be there- preffered java version 11
+
+> Set up environment variable : JAVA_HOME and JAVA_PATH
+
+> Install eclipse for java developers 2021 -06
+
+> Create a Mavan project
+
+> Add the Dependencies in POM.xml
+
+> Create your programs.
+
+=================================
+> Understand the topic, asks question
+
+> execute the scenario
+
+if any issue, keep the prgram aside --> proceeed to the next one.
+
+trouble shooting at the end 12.45 to 1.30pm
+=============================================
+
+HTML Page: Collection of web elements
+
+Elelments     Actions can we perform
+========================================================================
+
+TextBox : element is visible or not, enabled or not, input data(char,inte)
+
+Button : element is visible or not, enabled or not, clickable or not
+
+Link : element is visible or not, enabled or not, clickable or not
+
+DropDown: element is visible or not, enabled or not, selection, count the number of choices
+
+CheckBox : element is visible or not, enabled or not, click
+
+Radiobutton: element is visible or not, enabled or not, click
+
+Tables,
+
+Dynamic dropdowns, Calender
+
+==========================================================
+Now we want selenium to perform the testing for us:
+
+1. Open the browser
+
+2. Enter the URL
+
+3. Maxamize the browser window
+
+4. Delete cookies of the browser
+
+5. Find the username textbox , check if it displayed or not
+
+6. Find the username textbox , check if it enabled or not
+
+7. Find the username textbox , check if you insert data init or not.
+
+5. Find the passowrd textbox , check if it displayed or not
+
+6. Find the password textbox , check if it enabled or not
+
+7. Find the password textbox , check if you insert data init or not.
+
+
+================================================
+
+We want selenium to find an element and perform an action on it
+
+How to find the address of the element?
+
+Selenium provides us Locators that will help you find the address of your element on the webpage
+
+There are total 8 locators:
+
+1. id               
+
+2. name
+
+3. linkText
+
+4. Partiallinktext
+
+5. CSS
+
+6. XPATH
+
+7. tagname
+
+8. classname
+
+
+===========================
+
+Selenium gives following syntax that you will use to provide element address in the script
+
+
+ driver.findElement(By.locatorname("value"))
+
+findElement : method
+By: class
+locatorname: locator method
+value: we get form the webpage
+===========================================
+How do we get the value:
+============================================
+1. Go to the webpage which is to tested
+
+2. select the element to be tested
+
+3. right click on the element --> click inspect
+
+4. At bottom, you will the complete document of the page--> you will be on the element tab
+
+5. You will also see a line which highlighted in blue color
+
+6. The highlighted html tag are the attributes of the element
+
+<input id="wpName2" name="wpName" size="20" class="loginText mw-userlogin-username cdx-text-input__input" placeholder="Enter your username" tabindex="1" required="" autocomplete="username">
+
+Using these attribites we will  find the locator value of the element
+
+=========================================
+
+Suppose i want to find the element using ID locator
+=============================================
+
+Element: 			locator:		value
+
+1. username  			id			wpName2
+
+2.password			id   			wpPassword2
+
+3. retype			id 			wpRetype
+
+Suppose I want to find the above element using name locator
+=============================================
+
+Element: 			locator:		value
+
+1. username			name			wpName
+  			
+2.password			name			wpPassword
+
+3. retype			name 			retype
+
+LinkText localtor
+=================================
+driver.findElement(By.linktext("org.openqa.selenium")
+
+driver.findElement(By.linktext("org.openqa.selenium.bidi.browsingcontext"))
+
+PartialLinktext locator:
+================================
+This is usefull, when you ahve links with unique text and links have longer text
+then we can use partial link text
+
+driver.findElement(By.partialLinktext("selenium");
+
+
+driver.findElement(By.partialLinktext(".browsingcontext"))
+
+=============================================
+
+
+XPATh Functions:
+
+===================
+
+Regualr xpath expression:
+
+//tagname[@attribute='exactvalue']
+
+1. starts-with()
+
+//tagname[starts-with(@attribute,'startingtextvalue')]
+
+here we will proivde the starting value of the attribute
+
+for example:
+
+attribute ==> name = name8ca553fc
+
+nameb7cb2d8b
+
+//tagname[starts-with(@name,'login')]
+
+2. contains()
+
+attribute ==> name = login8ca553fc
+
+//tagname[contains(@attribute,'anytextvalue')]
+
+// input[contains(@name,'login')]
+
+3. text() --> used for link elements
+
+//tagname[text()='value']
+
+<a>log in </a>
+
+//a[text()='log in']
+
+<a class="blog-pager-newer-link" href="http://seleniumpractise.blogspot.com/2016/08/how-to-handle-autocomplete-feature-in.html" id="Blog1_blog-pager-newer-link" title="Newer Post">Newer Post</a>
+
+====================================
+Xpath Axis
+====================================
+
+Suppose an Xpath is returning multiple tags and you want to choose a single in it
+
+Then you can use a new methods
+
+driver.findElements(By.xpath("//tagname[@attribute='value']")).get(1)
+
+driver.findElements(By.xpath("//tagname[@attribute='value']")).get(2)
+
+OR
+
+driver.findElement(By.xpath((//tagname[@attribute='value'])[1]))
+driver.findElement(By.xpath((//tagname[@attribute='value'])[2]))
+
+
+//tagname[@attribute='value']/axisName::tagname[index]
+
+======================================
+
+
+XPATH Axis: It is a process in which you will travel from one tag to reach your desired element tag 
+
+syntax:  //tagname[@attribute='value]/axisName::tagname
+
+travel downwards in the document we have axis like:
+======================
+> child ==> find the child tags of parent tags
+> descendant ==> find the child and grandchild tags of parenet tag
+> following ==> find all the tags after the parent tag has closed
+
+Example:
+
+Pareent node/current node:  (//div[@class='cell'])[3]
+
+Child tag : (//div[@class='cell'])[3]/child::*
+
+Descendant tag: (//div[@class='cell'])[3]/descendant::*
+
+<html>
+ <tbody>
+  <tr1>
+    <td1> </td1>
+     <input>  </input>
+    <td2> </td2>
+      <input>  </input>
+ </tr1>
+ <tr2>
+    <td1> </td1>
+      <input>  </input>
+   <td2> </td2>
+     <input>  </input>
+ </tr2>
+ <tr3>
+   <td1> </td1>
+      <input>  </input>
+   <td2> </td2>
+     <input>  </input>
+ </tr3>
+</tbody>
+</html>
+
+//tbody[attribut='value]/descendant::td1[1]
+
+//tbody[attribut='value]/descendant::input[2]
+
+self	return the same current tag
+child	will return all the children of the current node
+parent	Will retrun the parent tag of the current node
+ancestor	selects all the ancestors of the context node
+ancestor-or-self	selects all the ancestors of the context node and itself
+descendant	will return all the children and grandchildren of the current node
+descendant-or-self	will return all the children of the current node and itself
+following	will return all the nodes that apppear after the current node
+following-sibling	"will return all the nodes that have :
+1. same parent as the current node
+2. appear after the conext node"
+preceding	will return all the nodes that appear before parent  of the context node and travelling through the root node
+preceding sibling	"will return all the nodes that have :
+1. same parent as the current node
+2. appear before the conext node"
+
+
+
+
+
+
+
+
+
+
+==========================================
+
+CSS Locator:
+=======================================
+
+tagname and id attribute
+
+Here # represent id attribute
+
+CSS locator : tagname#idvalue
+
+input#email
+
+
+2. tag[attribute='value']
+input[name='pass']
+
+3. tag.classattributevalue[attribute='value']
+
+here . represent class attribute value
+
+input.sc-jlyJG kxRJeL[id='src']
+
+4. Inspect the element --> rightclick on the element atrribut --> copy --> copy selector
+
+#src
+
+5. #idattributevalue
+
+6. contains() function--> used to fetch text of the element
+
+syntax=>  tagname:contains('text value')
+
+OR use absolute CSS Selector path
+
+#userlogin2 > div > div.mw-htmlform-field-HTMLTextField.loginText.mw-userlogin-username.mw-ui-vform-field > label
+
+
+
+
+
+Wait time in selenium:
+=======================
+
+Waittime help selenium script to be in sync with you application
+
+If our application is takign time to load
+
+or
+
+If elements on the page are taking time to load
+
+Then we have to add waititimes in the script
+
+So that script waits for element/page to be available and then perform the action. In this way script will work wothout any issues.
+
+Various kinds of wait time:
+===============================
+
+Java --> Thread.sleep(5000);
+
+Selenium:
+
+Implicit wait:
+// Implicit wait is written in the beginning of the script after we open the URL
+		// here selenium is going to wait for full 3 seconds before throwing an error that element not found
+		// Even if elements are visible on the webpage, selenium will wait for 3 seconds
+
+
+
+Explicit wait:
+============================
+
+In this type of wait there are 2 conditions:
+
+1. Explicitly wait for the element to be visible and if it is visible then perform the action
+2. If element is not visible then continue to wait for given duration
+
+If the condition is satisfied even before the duration is complete, selenium will go ahead and perform the action
+Selenium will continue to exeucte the script.
+
+To implement this we use:
+
+WebDriverWait --> create an object of this class
+until(ExpectedConditions.visibilityofElement(e1))
+wait frot he duration to complete--> throw the error 
+
+Fluent wait:
+=============================
+
+FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+    .withTimeout(Duration.ofSeconds(10))
+          .pollingEvery(Duration.ofSeconds(5)).ignoring(NoSuchElementException.class);
+          WebElement element = wait.until(new Function<WebDriver, WebElement>() 
+
+
+     {
+   public WebElement apply(WebDriver driver) {
+   WebElement element = driver.findElement(By.xpath(""""));
+   return element;
+   }
+     });"
+
+===============================
+
+Selenium cannot interact with desktop applicaions
+
+If we have to upload files from a windows laptop thenw e ahve to integrate selenium with AutoIT
+
+AutoIT tool lets you write a script --> compile the scripts , using which we  will handle and interact with desktop application
+
+First selenium will work on webpage
+
+Then we give control to autoIT tool to perform the desktop related action
+
+===================
+
+As part of thsi scenario: we will go to
+
+
+https://www.autoitscript.com/site/autoit/downloads/
+
+1. Download autoIT
+
+https://www.autoitscript.com/site/autoit/downloads/
+
+2. Then on the same page you will click on AutoIt Script Editor.
+
+We need to write the script
+
+On your windows machine search for editor-> scite
+
+It will open the editor:
+
+ControlFocus("Open","","Edit1")
+ControlSetText("Open","","Edit1","C:\Users\sonal\Documents\ATE-Phase1-SL\JDBCconnectivity.png")
+ControlClick("Open","","Button1")
+
+
+To find the element--> on windows machine --> search for tool AutoIT windows info --> open it
+
+drag the finder tool on the text box. itwill show details in box: class and instance
+
+so element location is : classinstance => Edit1
+
+Similarly for open button ==> it is Button1
+
+======================
+
+Once the script is ready, save the script on your windows machine
+
+Right click on the script --> clcik on Show more options  and select compile the script.
+
+A compiled file will be available in the folder.
+================
+
+This compiled file will be executed in selenium script
+
+Give this code
+
+Runtime.getRuntime().exec("C:\\Users\\sonal\\Desktop\\AutiitScripts\\Scriptupload3.exe");
+========================================
+Selenium Integrationw ith SikuliX
+========================================
+
+
+This will not work with Maven project
+
+You have to use a Java project
+
+In this project add the selenium jar files
+
+you cannot execute it on you lab machine
+
+It has to be done on windows laptop
+
+We will go to this page https://launchpad.net/sikuli/+download
+
+And download the jar file -->  sikulixide-2.0.5.jar (md5)
+
+Add this jar file to Java project --> go to build path--> select class path --> add the jar --> apply and close
+
+
+
+Sikuli interacts with the windows application via images
+
+Which ever element we have to test on desktop application, we have to take an image of it-> using anipping tool
+
+and feed this image to sikuli tool methods
+
+What ever is on the image it will perofrm that action on webpage
+
+
+So change the resultion of your desktop
+
+go to desktop--> right clik-->display settings --> resolution --> 1280 * 720
+
+After this .. take snapshots of the application
+
+Save the snapshots at a folder
+
+And then pass it to selenium script
+
+Make sure the file to be uploaded shoudl also have resolution same as 1280 * 720
+
+
+=============================================
+
+You are asked to build an online travel booking website. This website should have various web elements to handle the inputs given by a user.
+
+
+The Following Requirements Should Be Met: 
+
+Create a Java/Maven Project. 
+
+Add the jar files of the Selenium or dependencies. 
+
+Open the browser and locate the web elements using Locators.  -- Script 1
+
+Create a page object design pattern class to store the web elements of a webpage.  -- not required- SKIP it
+
+Install and configure AutoIT. 
+
+Open the SciTE editor and write the script to select the file from the desktop. 
+
+Save the AutoIT script as .au3 format and compile it. 
+
+Create a class to upload the file by calling .au3 script. 
+
+Create a class to handle web elements. (mouse hover script)
+
+Create a class to handle external elements.  (Alerts)
+
+Create a table in SQL – for product data. 
+
+Create a DB connection class to initiate a JDBC connection. 
+
+Create a class for Screenshot. (screenhot code)
+
+Run the project.  -- not required- SKIP it
