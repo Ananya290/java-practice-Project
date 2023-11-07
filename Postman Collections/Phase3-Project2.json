@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "45c94c2e-6ae6-4525-9914-892db72a390a",
+		"name": "Phase3-Project2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get URL",
+			"id": "edbfbf1d-da14-4acb-be8c-dd71b6757106",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/data/2.5/weather?q={{City}}&appid=aa9126a7d7b4c20f33602b045a197e3f",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "{{City}}"
+						},
+						{
+							"key": "appid",
+							"value": "aa9126a7d7b4c20f33602b045a197e3f"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
